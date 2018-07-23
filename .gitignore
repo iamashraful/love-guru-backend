@@ -2,6 +2,8 @@
 __pycache__
 *.pyc
 
+# Config Files
+config/db_config.py
 
 # Editor directories and files
 .idea
