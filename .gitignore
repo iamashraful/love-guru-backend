@@ -1,0 +1,13 @@
+# Compiled Files
+__pycache__
+*.pyc
+
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
