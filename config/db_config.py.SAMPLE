@@ -3,7 +3,7 @@ __author__ = 'Ashraful'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'love-guru',
+        'NAME': 'money_tracker',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
