@@ -1,7 +1,7 @@
 from django.db import models
 
-from common.enums import GenderEnum
-from common.models.base import BaseEntity
+from api.enums import GenderEnum
+from api.models.base import BaseEntity
 
 
 class Profile(BaseEntity):
@@ -13,7 +13,7 @@ class Profile(BaseEntity):
     photo = models.ImageField(null=True, upload_to='media/img/profile')
 
     class Meta:
-        app_label = 'common'
+        app_label = 'api'
 
     def __str__(self):
         return self.name

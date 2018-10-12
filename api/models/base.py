@@ -11,4 +11,4 @@ class BaseEntity(models.Model):
 
     class Meta:
         abstract = True
-        app_label = 'common'
+        app_label = 'api'
