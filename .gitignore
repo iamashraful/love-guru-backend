@@ -13,3 +13,6 @@ config/db_config.py
 *.njsproj
 *.sln
 *.sw*
+
+# Others
+media/*
