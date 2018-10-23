@@ -15,5 +15,9 @@ class Profile(BaseEntity):
     class Meta:
         app_label = 'api'
 
+    @property
+    def username(self):
+        return self.user.username
+
     def __str__(self):
         return self.name
