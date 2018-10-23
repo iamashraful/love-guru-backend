@@ -17,6 +17,7 @@ class LoginView(APIView):
             if _user is not None:
                 token, _created = Token.objects.get_or_create(user_id=_user.pk)
                 response = {
+                    "success": True,
                     "token": token.key,
                     "username": _user.username
                 }

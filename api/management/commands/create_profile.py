@@ -15,6 +15,7 @@ class Command(BaseCommand):
         _u, _p = self.get_username_and_password()
         user, _created = User.objects.get_or_create(username=_u)
         user.set_password(_p)
+        user.save()
         Profile.objects.get_or_create(name=_u, user_id=user.pk)
         print('Created.')
 
