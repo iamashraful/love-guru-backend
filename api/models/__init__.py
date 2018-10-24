@@ -6,5 +6,5 @@ __author__ = 'Ashraful'
 
 
 __all__ = [
-    'BaseEntity', 'Profile', Wallet, Transaction, Category
+    'BaseEntity', 'Profile', 'Wallet', 'Transaction', 'Category'
 ]

@@ -15,7 +15,7 @@ class Category(BaseEntity):
 class Wallet(BaseEntity):
     name = models.CharField(max_length=64)
     balance = models.FloatField(default=0)
-    initial_balance = models.FloatField(default=0, editable=False)
+    initial_balance = models.FloatField(default=0)
     is_active = models.BooleanField(default=True)
 
     class Meta:
@@ -27,6 +27,7 @@ class Transaction(BaseEntity):
     note = models.TextField(null=True, blank=True)
     category = models.ForeignKey('api.Category', on_delete=models.SET_NULL, null=True)
     wallet = models.ForeignKey('api.Wallet', on_delete=models.SET_NULL, null=True)
+    amount = models.FloatField(default=None, null=True)
     transaction_time = models.BigIntegerField(default=None, null=True)
 
     class Meta:
