@@ -116,3 +116,7 @@ CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:8080',
     'money.mrrobin.me'
 )
+
+FAST_API_ENABLED_APPS = [
+    'api'
+]

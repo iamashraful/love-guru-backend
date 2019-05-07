@@ -11,6 +11,12 @@ class Category(BaseEntity):
     class Meta:
         app_label = 'api'
 
+    @classmethod
+    def exposed_api(cls, *args, **kwargs):
+        return {
+            "api_url": 'categories',
+        }
+
 
 class Wallet(BaseEntity):
     name = models.CharField(max_length=64)
@@ -20,6 +26,12 @@ class Wallet(BaseEntity):
 
     class Meta:
         app_label = 'api'
+
+    @classmethod
+    def exposed_api(cls, *args, **kwargs):
+        return {
+            "api_url": 'wallets',
+        }
 
 
 class Transaction(BaseEntity):
@@ -32,3 +44,9 @@ class Transaction(BaseEntity):
 
     class Meta:
         app_label = 'api'
+
+    @classmethod
+    def exposed_api(cls, *args, **kwargs):
+        return {
+            "api_url": 'transactions',
+        }
