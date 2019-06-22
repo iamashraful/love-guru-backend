@@ -2,7 +2,7 @@ import graphene
 from graphene import InputObjectType
 
 
-class UserSchema(InputObjectType):
+class UserInput(InputObjectType):
     id = graphene.ID()
     username = graphene.String()
     first_name = graphene.String()
@@ -10,7 +10,7 @@ class UserSchema(InputObjectType):
     is_active = graphene.Boolean()
 
 
-class ProfileSchema(InputObjectType):
+class ProfileInput(InputObjectType):
     id = graphene.ID()
     name = graphene.String()
     address = graphene.String()

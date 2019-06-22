@@ -17,6 +17,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'graphene_django',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -120,3 +121,7 @@ CORS_ORIGIN_WHITELIST = (
 FAST_API_ENABLED_APPS = [
     'api'
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'api.graphql.main.schema'
+}

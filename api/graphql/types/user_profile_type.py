@@ -1,17 +1,17 @@
 import graphene
 from django.contrib.auth.models import User
 from graphene import ObjectType
-from graphql import GraphQLObjectType
+from graphene_django import DjangoObjectType
 
 from api.models import Profile
 
 
-class UserType(GraphQLObjectType):
+class UserType(DjangoObjectType):
     class Meta:
         model = User
 
 
-class ProfileType(GraphQLObjectType):
+class ProfileType(DjangoObjectType):
     class Meta:
         model = Profile
 
@@ -25,12 +25,12 @@ class Query(ObjectType):
     profiles = graphene.List(ProfileType)
 
     def resolve_user(self, info, **kwargs):
-        _id = kwargs.get('pk')
+        _id = kwargs.get('id')
         if _id:
             return User.objects.get(pk=_id)
 
     def resolve_profile(self, info, **kwargs):
-        _id = kwargs.get('pk')
+        _id = kwargs.get('id')
         if _id:
             return Profile.objects.get(pk=_id)
 
