@@ -17,6 +17,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'graphene_django',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -25,6 +26,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
+    'pnp_graphql',
     'api'
 ]
 
@@ -116,3 +118,12 @@ CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:8080',
     'money.mrrobin.me'
 )
+
+GRAPHENE = {
+    'SCHEMA': 'pnp_graphql.schema.schema'
+}
+
+PNP_GRAPHQL = {
+    'ENABLED_APPS': ['api'],
+    # 'AUTHENTICATION_CLASS': 'pnp_graphql.authentication.TokenAuthentication'
+}
